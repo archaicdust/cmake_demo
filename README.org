@@ -1,0 +1,28 @@
+
+* note
+
+CMake basics
+https://www.siliceum.com/en/blog/post/cmake_01_cmake-basics
+
+#+BEGIN_SRC sh
+mkdir build
+cd build
+cmake -G "Your generator" ..
+cmake --build . [--target yourtarget]
+#+END_SRC
+
+#+BEGIN_SRC sh
+cmake -B build -G "Your generator" -S .
+cmake --build build
+#+END_SRC
+
+cmake_minimum_required(VERSION 3.14)
+pitchfork convention for file layout.
+Need to call add_subdirectory in the correct order if you want to have dependencies across the different subdirectories.
+
+#+BEGIN_EXAMPLE
+project(myawesomeproject VERSION 0.10 LANGUAGES C CXX)
+add_subdirectory(libA)
+add_subdirectory(libB) # After libA so that we can link it
+add_subdirectory(programA) # After libB so that we can link it
+#+END_EXAMPLE
