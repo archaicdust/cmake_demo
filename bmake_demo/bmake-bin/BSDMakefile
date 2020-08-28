@@ -1,0 +1,9 @@
+PROG = cat
+
+_CCLINK = $(CXX)
+SRCS = cat.cc
+
+.include <prog.mk>
+
+clean:
+	rm -rf *.o *.d

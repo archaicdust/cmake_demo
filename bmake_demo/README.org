@@ -1,0 +1,24 @@
+
+* bmake setup
+
+bmake http://www.crufty.net/help/sjg/bmake.html
+
+** install
+
+bmake bmake.tar.gz  http://www.crufty.net/ftp/pub/sjg/bmake.tar.gz
+
+#+begin_src sh
+./configure --prefix=/path/to/bmake
+make
+make install
+#+end_src
+
+#+begin_src sh
+export PATH=/path/to/bmake/bin:$PATH
+#+end_src
+
+** mk
+
+#+begin_example
+ls /path/to/bmake/share/mk
+#+end_example
