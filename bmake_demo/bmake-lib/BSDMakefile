@@ -1,0 +1,6 @@
+LIB = add
+
+_CCLINK = $(CXX)
+SRCS = add.cc
+
+.include <lib.mk>

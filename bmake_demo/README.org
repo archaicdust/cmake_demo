@@ -19,6 +19,11 @@ export PATH=/path/to/bmake/bin:$PATH
 
 ** mk
 
-#+begin_example
-ls /path/to/bmake/share/mk
-#+end_example
+Download mk files (mk.tar.gz) if you use pkgsrc bmake
+
+#+begin_src sh
+bmake -m ~/mk -f BSDMakefile
+#+end_src
+
+bmake http://www.crufty.net/help/sjg/bmake.html
+mk.tar.gz http://www.crufty.net/ftp/pub/sjg/mk.tar.gz
